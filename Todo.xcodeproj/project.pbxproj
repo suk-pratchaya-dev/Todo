@@ -8,11 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		DB9809D426F8B168009DEEDD /* TodoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9809D326F8B168009DEEDD /* TodoApp.swift */; };
-		DB9809D626F8B168009DEEDD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9809D526F8B168009DEEDD /* ContentView.swift */; };
 		DB9809D826F8B16B009DEEDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB9809D726F8B16B009DEEDD /* Assets.xcassets */; };
 		DB9809DB26F8B16B009DEEDD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB9809DA26F8B16B009DEEDD /* Preview Assets.xcassets */; };
 		DB9809E626F8B16B009DEEDD /* TodoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9809E526F8B16B009DEEDD /* TodoTests.swift */; };
 		DB9809F126F8B16B009DEEDD /* TodoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9809F026F8B16B009DEEDD /* TodoUITests.swift */; };
+		DB980A0226F8B32B009DEEDD /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB980A0126F8B32B009DEEDD /* MainView.swift */; };
+		DB980A0426F8B83B009DEEDD /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB980A0326F8B83A009DEEDD /* MainViewModel.swift */; };
+		DB980A0A26F8BAFE009DEEDD /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB980A0926F8BAFE009DEEDD /* LoginView.swift */; };
+		DB980A0C26F8BB58009DEEDD /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB980A0B26F8BB58009DEEDD /* RegisterView.swift */; };
+		DB980A0E26F8CA45009DEEDD /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB980A0D26F8CA45009DEEDD /* LoginViewModel.swift */; };
+		DB980A1126F8CB19009DEEDD /* TasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB980A1026F8CB19009DEEDD /* TasksView.swift */; };
+		DB980A1326F8CB24009DEEDD /* TasksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB980A1226F8CB24009DEEDD /* TasksViewModel.swift */; };
+		DB980A1726F8CB53009DEEDD /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB980A1626F8CB53009DEEDD /* Task.swift */; };
+		DB980A1E26F8CD5B009DEEDD /* TaskDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB980A1D26F8CD5B009DEEDD /* TaskDetailView.swift */; };
+		DB980A2026F8CD66009DEEDD /* TaskDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB980A1F26F8CD66009DEEDD /* TaskDetailViewModel.swift */; };
+		DB980A2226F8D078009DEEDD /* TaskRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB980A2126F8D078009DEEDD /* TaskRowView.swift */; };
+		DB980A2726F8D0E8009DEEDD /* TaskRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB980A2626F8D0E8009DEEDD /* TaskRowViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +46,6 @@
 /* Begin PBXFileReference section */
 		DB9809D026F8B168009DEEDD /* Todo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Todo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB9809D326F8B168009DEEDD /* TodoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoApp.swift; sourceTree = "<group>"; };
-		DB9809D526F8B168009DEEDD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DB9809D726F8B16B009DEEDD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB9809DA26F8B16B009DEEDD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DB9809DC26F8B16B009DEEDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,6 +55,18 @@
 		DB9809EC26F8B16B009DEEDD /* TodoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB9809F026F8B16B009DEEDD /* TodoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoUITests.swift; sourceTree = "<group>"; };
 		DB9809F226F8B16B009DEEDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB980A0126F8B32B009DEEDD /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		DB980A0326F8B83A009DEEDD /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		DB980A0926F8BAFE009DEEDD /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		DB980A0B26F8BB58009DEEDD /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		DB980A0D26F8CA45009DEEDD /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		DB980A1026F8CB19009DEEDD /* TasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksView.swift; sourceTree = "<group>"; };
+		DB980A1226F8CB24009DEEDD /* TasksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewModel.swift; sourceTree = "<group>"; };
+		DB980A1626F8CB53009DEEDD /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		DB980A1D26F8CD5B009DEEDD /* TaskDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailView.swift; sourceTree = "<group>"; };
+		DB980A1F26F8CD66009DEEDD /* TaskDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailViewModel.swift; sourceTree = "<group>"; };
+		DB980A2126F8D078009DEEDD /* TaskRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRowView.swift; sourceTree = "<group>"; };
+		DB980A2626F8D0E8009DEEDD /* TaskRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRowViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,9 +118,10 @@
 			isa = PBXGroup;
 			children = (
 				DB9809D326F8B168009DEEDD /* TodoApp.swift */,
-				DB9809D526F8B168009DEEDD /* ContentView.swift */,
 				DB9809D726F8B16B009DEEDD /* Assets.xcassets */,
 				DB9809DC26F8B16B009DEEDD /* Info.plist */,
+				DB9809FE26F8B182009DEEDD /* Scenes */,
+				DB980A1426F8CB38009DEEDD /* Models */,
 				DB9809D926F8B16B009DEEDD /* Preview Content */,
 			);
 			path = Todo;
@@ -128,6 +151,89 @@
 				DB9809F226F8B16B009DEEDD /* Info.plist */,
 			);
 			path = TodoUITests;
+			sourceTree = "<group>";
+		};
+		DB9809FE26F8B182009DEEDD /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				DB980A0526F8BA93009DEEDD /* Main */,
+				DB980A0726F8BAE3009DEEDD /* Login */,
+				DB980A0826F8BAEC009DEEDD /* Register */,
+				DB980A1926F8CCA6009DEEDD /* Task */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		DB980A0526F8BA93009DEEDD /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				DB980A0126F8B32B009DEEDD /* MainView.swift */,
+				DB980A0326F8B83A009DEEDD /* MainViewModel.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		DB980A0726F8BAE3009DEEDD /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				DB980A0926F8BAFE009DEEDD /* LoginView.swift */,
+				DB980A0D26F8CA45009DEEDD /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		DB980A0826F8BAEC009DEEDD /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				DB980A0B26F8BB58009DEEDD /* RegisterView.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		DB980A1426F8CB38009DEEDD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DB980A1626F8CB53009DEEDD /* Task.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DB980A1826F8CC93009DEEDD /* TasksView */ = {
+			isa = PBXGroup;
+			children = (
+				DB980A1026F8CB19009DEEDD /* TasksView.swift */,
+				DB980A1226F8CB24009DEEDD /* TasksViewModel.swift */,
+			);
+			path = TasksView;
+			sourceTree = "<group>";
+		};
+		DB980A1926F8CCA6009DEEDD /* Task */ = {
+			isa = PBXGroup;
+			children = (
+				DB980A2326F8D07D009DEEDD /* TaskRow */,
+				DB980A1C26F8CD50009DEEDD /* TaskDetail */,
+				DB980A1826F8CC93009DEEDD /* TasksView */,
+			);
+			name = Task;
+			path = Task/Task;
+			sourceTree = "<group>";
+		};
+		DB980A1C26F8CD50009DEEDD /* TaskDetail */ = {
+			isa = PBXGroup;
+			children = (
+				DB980A1D26F8CD5B009DEEDD /* TaskDetailView.swift */,
+				DB980A1F26F8CD66009DEEDD /* TaskDetailViewModel.swift */,
+			);
+			path = TaskDetail;
+			sourceTree = "<group>";
+		};
+		DB980A2326F8D07D009DEEDD /* TaskRow */ = {
+			isa = PBXGroup;
+			children = (
+				DB980A2126F8D078009DEEDD /* TaskRowView.swift */,
+				DB980A2626F8D0E8009DEEDD /* TaskRowViewModel.swift */,
+			);
+			path = TaskRow;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +365,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB9809D626F8B168009DEEDD /* ContentView.swift in Sources */,
 				DB9809D426F8B168009DEEDD /* TodoApp.swift in Sources */,
+				DB980A1326F8CB24009DEEDD /* TasksViewModel.swift in Sources */,
+				DB980A0C26F8BB58009DEEDD /* RegisterView.swift in Sources */,
+				DB980A2226F8D078009DEEDD /* TaskRowView.swift in Sources */,
+				DB980A0E26F8CA45009DEEDD /* LoginViewModel.swift in Sources */,
+				DB980A1E26F8CD5B009DEEDD /* TaskDetailView.swift in Sources */,
+				DB980A1126F8CB19009DEEDD /* TasksView.swift in Sources */,
+				DB980A0226F8B32B009DEEDD /* MainView.swift in Sources */,
+				DB980A2026F8CD66009DEEDD /* TaskDetailViewModel.swift in Sources */,
+				DB980A2726F8D0E8009DEEDD /* TaskRowViewModel.swift in Sources */,
+				DB980A0A26F8BAFE009DEEDD /* LoginView.swift in Sources */,
+				DB980A1726F8CB53009DEEDD /* Task.swift in Sources */,
+				DB980A0426F8B83B009DEEDD /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
