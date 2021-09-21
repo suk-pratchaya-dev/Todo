@@ -25,11 +25,15 @@ struct LoginView: View {
         NavigationView(content: {
             VStack(alignment: .center, spacing: 20, content: {
                 VStack(content: {
-                    TextField("Username", text: $username)
+                    TextField("Email", text: $username)
+                        .autocapitalization(.none)
+                        .disableAutocorrection(true)
                     
                     Divider()
                     
                     SecureField("Password", text: $password)
+                        .autocapitalization(.none)
+                        .disableAutocorrection(true)
                 })
                 .frame(width: 250, alignment: .center)
                 
@@ -38,7 +42,11 @@ struct LoginView: View {
                 .cornerRadius(10.0)
                 
                 Button(action: {
-                    viewModel.login(username: username, password: password)
+                    viewModel.login(username: username, password: password) { isSuccess in
+                        if isSuccess {
+                            isPresented = false
+                        }
+                    }
                 }, label: {
                     Text("Login")
                 })
@@ -48,4 +56,5 @@ struct LoginView: View {
             .navigationTitle("Login")
         })
     }
+    
 }

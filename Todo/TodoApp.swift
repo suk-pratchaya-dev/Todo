@@ -9,6 +9,13 @@ import SwiftUI
 
 @main
 struct TodoApp: App {
+    
+    init() {
+        // init app
+        debugPrint("app launch with option")
+        _ = AuthenticationManager.shared
+    }
+    
     var body: some Scene {
         WindowGroup {
             MainView(viewModel: MainViewModel())

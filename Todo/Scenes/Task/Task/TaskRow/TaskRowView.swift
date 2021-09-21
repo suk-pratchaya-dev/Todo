@@ -21,15 +21,15 @@ struct TaskRowView: View {
                 .font(.title)
             
             VStack(alignment: .leading, spacing: nil, content: {
-                Text(viewModel.task.description)
+                Text(viewModel.task.description ?? "")
                     .font(.headline)
-                Text(viewModel.task.lastUpdate)
+                Text(viewModel.task.lastUpdate ?? "")
                     .font(.subheadline)
             })
             
             Spacer()
             
-            Image(systemName: viewModel.task.isCompleted ? "circle.fill" : "circle")
+            Image(systemName: viewModel.task.isCompleted ?? false ? "circle.fill" : "circle")
                 .font(.body)
         })
         
@@ -38,7 +38,7 @@ struct TaskRowView: View {
 
 struct TaskRowView_Previews: PreviewProvider {
     static var previews: some View {
-        let task: Task = Task(id: 1, description: "description", lastUpdate: "12/02/2021", isCompleted: false)
+        let task: Task = Task(id: "1", description: "description", lastUpdate: "12/02/2021", isCompleted: false)
         TaskRowView(viewModel: TaskRowViewModel(task: task))
     }
 }

@@ -12,15 +12,12 @@ struct TaskDetailView: View {
     @ObservedObject private var viewModel: TaskDetailViewModel
     
     @State private var isPresentedAlert: Bool = false
-    @State private var description: String = ""
-    @State private var lastUpdate: String = ""
-    @State private var isCompleted: Bool
+    @State private var isPresentedDeleteAlert: Bool = false
+    @State private var description: String
     
     init(viewModel: TaskDetailViewModel) {
         self.viewModel = viewModel
-        self.description = viewModel.task.description
-        self.lastUpdate = viewModel.task.lastUpdate
-        self.isCompleted = viewModel.task.isCompleted
+        self.description = viewModel.task.description ?? ""
     }
     
     var body: some View {
@@ -36,13 +33,14 @@ struct TaskDetailView: View {
                 
                 if viewModel.task.description != description {
                     debugPrint("send api update task")
+                    viewModel.updateDescription(description: description)
                 }
             }
 
             HStack(content: {
                 Text("Last update")
                 Spacer()
-                Text(lastUpdate)
+                Text(viewModel.task.lastUpdate ?? "")
                     .foregroundColor(.gray)
             })
             
@@ -52,16 +50,32 @@ struct TaskDetailView: View {
                 Spacer()
                 
                 Button(action: {
-                    isCompleted.toggle()
+                    viewModel.completeTask(isComplete: !(viewModel.task.isCompleted ?? false))
                 }, label: {
-                    Image(systemName: isCompleted ? "circle.fill" : "circle")
+                    Image(systemName: viewModel.task.isCompleted ?? false ? "circle.fill" : "circle")
                         .font(.body)
                 })
             })
         })
+        .onChange(of: viewModel.isTaskDeleted, perform: { isTaskDeleted in
+            if isTaskDeleted {
+                isPresentedDeleteAlert = true
+            }
+        })
         .alert(isPresented: $isPresentedAlert, content: {
             Alert(title: Text("Error"), message: Text("Description is empty"), dismissButton: .default(Text("Done")))
         })
+        .alert(isPresented: $isPresentedDeleteAlert, content: {
+            Alert(title: Text("Delete Task"), message: Text("Task is deleted"), dismissButton: .default(Text("OK")))
+        })
         .navigationTitle("Task Deatil")
+        .navigationBarItems(trailing: Button(action: {
+            viewModel.deleteTask()
+        }, label: {
+            Image(systemName: "trash.circle.fill")
+                .resizable()
+                .scaledToFit()
+                .font(.title)
+        }))
     }
 }

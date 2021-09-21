@@ -14,8 +14,6 @@ struct MainView: View {
     @State var isPresentedLoginView: Bool = false
     @State var isPresentedRegisterView: Bool = false
     
-    @State var isLoggedIn: Bool = true
-    
     init(viewModel: MainViewModel) {
         self.viewModel = viewModel
     }
@@ -23,22 +21,24 @@ struct MainView: View {
     var body: some View {
         NavigationView(content: {
             ZStack(content: {
-                if isLoggedIn {
+                if viewModel.isLogin {
                     TasksView(viewModel: TasksViewModel())
+                        .navigationBarItems(trailing: Button(action: { viewModel.logout() },
+                                                             label: { Text("Logout") }))
                 } else {
                     Text("Please Login to see all task")
+                        .navigationBarItems(leading: Button(action: { isPresentedRegisterView = true },
+                                                            label: { Text("Register") }),
+                                            trailing: Button(action: { isPresentedLoginView = true },
+                                                             label: { Text("Login") }))
                 }
             })
             .navigationTitle("Tasks")
-            .navigationBarItems(leading: Button(action: { isPresentedRegisterView = true },
-                                                label: { Text("Register") }),
-                                trailing: Button(action: { isPresentedLoginView = true },
-                                                 label: { Text("Login") }))
             .sheet(isPresented: $isPresentedLoginView, content: {
                 LoginView(viewModel: LoginViewModel(), isPresented: $isPresentedLoginView)
             })
             .sheet(isPresented: $isPresentedRegisterView, content: {
-                RegisterView(isPresented: $isPresentedRegisterView)
+                RegisterView(viewModel: RegisterViewModel(), isPresented: $isPresentedRegisterView)
             })
         })
     }

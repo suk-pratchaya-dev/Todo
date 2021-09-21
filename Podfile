@@ -6,7 +6,8 @@ target 'Todo' do
   use_frameworks!
 
   # Pods for Todo
-  pod 'Moya', '~> 15.0'
+  pod 'Moya/Combine', '~> 15.0'
+  pod 'KeychainAccess'
 
   target 'TodoTests' do
     inherit! :search_paths
